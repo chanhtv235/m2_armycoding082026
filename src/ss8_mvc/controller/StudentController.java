@@ -9,19 +9,19 @@ import java.util.Scanner;
 
 public class StudentController {
     private IStudentService studentService = new StudentService();
-    public  void showMenu(){
+    public void showMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
-        while (flag){
+        while (flag) {
             System.out.println("-----Quản lý sinh viên-----" +
                     "\n1. Danh sách" +
                     "\n2. Thêm mới" +
                     "\n3. Xoá" +
                     "\n4. Tìm kiếm" +
-                    "\n5. Thoát");
+                    "\n5. Quay lại menu chính ");
             System.out.println("-------Chọn chức năng-------");
             int choose = Integer.parseInt(scanner.nextLine());
-            switch (choose){
+            switch (choose) {
                 case 1:
                     // chức hiể thị code ở đây
                     System.out.println("Hiển thị danh sách");
@@ -45,7 +45,5 @@ public class StudentController {
                     flag = false;
             }
         }
-        System.out.println("------Kết thúc chương trình -----------");
-
     }
 }
