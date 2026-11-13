@@ -2,36 +2,35 @@ package ss8_mvc.repository;
 
 import ss8_mvc.entity.Student;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class StudentRepository implements IStudentRepository{
-    public static Student[] studentList = new Student[100];
+    public static List<Student> studentList = new LinkedList<>();
 
     static {
         System.out.println(" Gỉa lập danh sách");
-        studentList[0] = new Student(1, "chánh", "ĐN");
-        studentList[1] = new Student(2, "hai", "ĐN");
-        studentList[2] = new Student(3, "anh", "ĐN");
-        studentList[3] = new Student(4, "thanh", "ĐN");
+        studentList.add(new Student(1, "chánh", "ĐN"));
+        studentList.add(new Student(2, "chánh", "ĐN"));
+        studentList.add(new Student(3, "chánh", "ĐN"));
+
     }
 
     @Override
-    public Student[] getAll() {
+    public List<Student> getAll() {
         // kết DB hoặc đọc ghi file
         return studentList;
     }
 
     @Override
-    public Student[] searchByName() {
-        return new Student[0];
+    public List<Student> searchByName() {
+        return null;
     }
 
     @Override
     public void add(Student student) {
-        for (int i = 0; i <studentList.length ; i++) {
-            if (studentList[i]==null){
-                studentList[i] = student;
-                break;
-            }
-        }
+       studentList.add(student);
     }
 
     @Override

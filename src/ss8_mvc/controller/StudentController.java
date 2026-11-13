@@ -5,6 +5,7 @@ import ss8_mvc.service.IStudentService;
 import ss8_mvc.service.StudentService;
 import ss8_mvc.view.StudentView;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentController {
@@ -26,7 +27,7 @@ public class StudentController {
                     // chức hiể thị code ở đây
                     System.out.println("Hiển thị danh sách");
                     // gọi service lấy dữ liệu
-                    Student[] studentList = studentService.getAll();
+                    List<Student> studentList = studentService.getAll();
                     // gọi view để hien thi
                     StudentView.showList(studentList);
                     break;

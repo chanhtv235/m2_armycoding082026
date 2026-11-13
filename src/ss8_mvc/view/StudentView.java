@@ -2,19 +2,16 @@ package ss8_mvc.view;
 
 import ss8_mvc.entity.Student;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class StudentView {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void showList(Student[] students){
-        for (int i = 0; i <students.length ; i++) {
-            if (students[i]!=null){
-                System.out.println(students[i].toString());
-            }else {
-                break;
-            }
+    public static void showList(List<Student> students){
+        for (int i = 0; i <students.size() ; i++) {
+                System.out.println(students.get(i).toString());
         }
     }
 

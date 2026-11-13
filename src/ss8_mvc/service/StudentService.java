@@ -4,18 +4,20 @@ import ss8_mvc.entity.Student;
 import ss8_mvc.repository.IStudentRepository;
 import ss8_mvc.repository.StudentRepository;
 
+import java.util.List;
+
 public class StudentService implements IStudentService{
     private IStudentRepository studentRepository = new StudentRepository();
     @Override
-    public Student[] getAll() {
+    public List<Student> getAll() {
         // nếu xử lý nghiệp vụ thì xử lý ở đây
         // nghiệp vụ: xử lý logic ( vd sắp xếp danh sach)
         return studentRepository.getAll();
     }
 
     @Override
-    public Student[] searchByName() {
-        return new Student[0];
+    public List<Student> searchByName() {
+        return null;
     }
 
     @Override
