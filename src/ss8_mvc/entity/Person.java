@@ -30,6 +30,10 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Id: "+this.id + " - Name: "+ name;
+        return "Id: " + this.id + " - Name: " + this.name;
+    }
+
+    public String getInfoToFile() {
+        return this.id + "," + this.name;
     }
 }

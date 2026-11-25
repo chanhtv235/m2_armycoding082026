@@ -39,6 +39,8 @@ public class StudentController {
 
                     break;
                 case 3:
+                    int id = StudentView.inputId("Cần xoá");
+                    studentService.deleteById(id);
                     break;
                 case 4:
                     break;

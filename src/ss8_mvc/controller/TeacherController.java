@@ -28,9 +28,8 @@ public class TeacherController {
                     // chức hiể thị code ở đây
                     System.out.println("Hiển thị danh sách");
                     // gọi service lấy dữ liệu
-                    Teacher[] teacherList = teacherService.getAll();
+
                     // gọi view để hien thi
-                    TeacherView.showList(teacherList);
                     break;
                 case 2:
                     // yêu cầu view nhập dữ liệu

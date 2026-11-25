@@ -22,9 +22,13 @@ public class StudentView {
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập tên");
         String name = scanner.nextLine();
-        System.out.println("Nhập địa chỉ");
+        System.out.println("Nhập tên lớp học");
         String address =  scanner.nextLine();
         Student student = new Student(id,name,address);
         return student;
+    }
+    public static int inputId(String message){
+        System.out.println("Nhập Id"+ message);
+        return Integer.parseInt(scanner.nextLine());
     }
 }

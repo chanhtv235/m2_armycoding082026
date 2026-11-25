@@ -9,4 +9,5 @@ public interface IStudentRepository {
     List<Student> searchByName();
     void add(Student student);
     void deleteById(int id);
+    Student findById(int id);
 }
