@@ -15,6 +15,7 @@ public class ReadAndWriteFile {
     public static void writeStringListToCSVFile(String filePath, List<String> stringList,boolean append){
         // tạo đối tượng file từ đường dẫn
         File file = new File(filePath);
+
         try(
                 FileWriter fileWriter = new FileWriter(file,append);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -44,6 +45,7 @@ public class ReadAndWriteFile {
 
         return stringList;
     }
+
     // đọc file
 
 }

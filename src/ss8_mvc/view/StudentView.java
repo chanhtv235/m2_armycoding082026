@@ -1,5 +1,6 @@
 package ss8_mvc.view;
 
+import ss8_mvc.common.RegexStudent;
 import ss8_mvc.entity.Student;
 
 import java.util.List;
@@ -20,8 +21,13 @@ public class StudentView {
         System.out.println("Thêm mới");
         System.out.println("Nhập id");
         int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập tên");
-        String name = scanner.nextLine();
+        String name = "";
+        do {
+            System.out.println("Nhập tên");
+            name = scanner.nextLine();
+            // kiểm tra tên hợp lệ không
+        }while (!RegexStudent.checkName(name));
+
         System.out.println("Nhập tên lớp học");
         String address =  scanner.nextLine();
         Student student = new Student(id,name,address);
